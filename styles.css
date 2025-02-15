@@ -195,3 +195,87 @@ body {
 #contact a:hover {
   text-decoration: underline;
 }
+
+.application-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #ff8c00, #ff5e62);
+  padding: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  max-width: 700px;
+  margin: auto;
+  color: white;
+}
+
+.app-media {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  justify-content: center;
+}
+
+.app-logo {
+  max-width: 130px;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.qr-code {
+  text-align: center;
+}
+
+.qr-code img {
+  max-width: 120px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.sp-optimized {
+  font-size: 14px;
+  color: #ffdfba;
+  margin-top: 5px;
+}
+
+.app-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.app-description ul {
+  list-style-type: none;
+  padding: auto;
+  margin: auto;
+}
+
+.app-description li {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  width: 80%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.app-links {
+  margin-top: 20px;
+}
+
+.app-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.app-links a:hover {
+  text-decoration: underline;
+  color: #ffdfba;
+}
