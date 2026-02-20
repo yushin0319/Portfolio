@@ -1,259 +1,326 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ポートフォリオ</title>
-    <!-- Include Font Awesome CDN -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <!-- Include custom CSS -->
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <!-- Header -->
-    <header class="header">
-      <h1>A Portfolio By Yushin Fudo</h1>
-      <nav class="navbar">
-        <ul>
-          <li><a href="#" data-section="profile">Profile</a></li>
-          <li><a href="#" data-section="application">Application</a></li>
-          <li><a href="#" data-section="career">Career</a></li>
-          <li><a href="#" data-section="contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yushin Fudo — Software Engineer</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">YF</a>
+      <div class="nav-links" id="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#career">Career</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
-    <!-- Main Content -->
-    <main class="container">
-      <!-- Profile Section (Split into two columns) -->
-      <section id="profile" class="section active">
-        <div class="profile-left">
-          <h2>不動 湧心</h2>
-          <p>1986年1月21日生まれ（39歳）</p>
-          <p>東京都国分寺市在住</p>
-          <p>基本情報技術者（2022年10月）</p>
-          <p>統計検定2級（2024年7月）</p>
-          <p>普通自動車運転免許</p>
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-particles" id="particles"></div>
+    <div class="hero-content">
+      <p class="hero-greeting fade-up">Hello, I'm</p>
+      <h1 class="hero-name fade-up delay-1">不動 湧心</h1>
+      <p class="hero-role fade-up delay-2">Software Engineer</p>
+      <p class="hero-tagline fade-up delay-3">仕組みを考え、つなぎ、育てる</p>
+      <div class="hero-cta fade-up delay-4">
+        <a href="#projects" class="btn btn-primary">Projects</a>
+        <a href="#contact" class="btn btn-ghost">Contact</a>
+      </div>
+    </div>
+    <div class="scroll-indicator fade-up delay-4">
+      <div class="scroll-line"></div>
+    </div>
+  </section>
 
-          <h2>自己紹介</h2>
-          <p>
-            これまで事務職に従事してきましたが、問題解決に取り組むエンジニアの仕事に関心を持ち、転職を志望しています。
-          </p>
-          <p>
-            自身の抽象化能力やレジリエンスを活かし、より社会に貢献できる仕事に挑戦したいと考えています。
-          </p>
-          <p>
-            求められるスキルや労働環境、報酬等の条件に応じて、特定の領域にこだわらず幅広い分野での就労を検討しています。
-          </p>
-          <p>
-            将来的に地方での生活も視野に入れており、リモートワークが可能なスキルを身につけることにも関心があります。
-          </p>
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title fade-up">About</h2>
+      <div class="about-grid">
+        <div class="about-text fade-up">
+          <p>心理学部卒、事務職14年、劇団15年。</p>
+          <p>35歳でプログラミングを始め、4年間の独学を経て2025年にエンジニアへ転職。現在1年目。</p>
+          <p>単一技術のスペシャリストではなく、複数の技術・サービス・AIを<strong>組み合わせてシステムを設計する</strong>ことに強みがあります。文系出身・創作活動の経験から来るUX感覚と、競技プログラミングで鍛えた論理的思考力の両立が、自分の持ち味です。</p>
         </div>
-        <div class="profile-right">
-          <h2>プログラミング</h2>
-          <ul class="modern-list">
-            <li>
-              <i class="fab fa-python icon-python"></i>
-              <div class="modern-list-content">
-                <span class="modern-list-title">Python</span>
-                <span class="modern-list-description"
-                  >最も習熟度が高い言語。主に競技プログラミング（AtCoder、Paiza）で使用。PoetryやFastAPIの利用経験あり。</span
-                >
-              </div>
-            </li>
-            <li>
-              <i class="fab fa-js-square icon-js"></i>
-              <div class="modern-list-content">
-                <span class="modern-list-title">JavaScript</span>
-                <span class="modern-list-description"
-                  >基本的な記述ができる。TypeScriptは学習中。Reactを使った開発経験あり。</span
-                >
-              </div>
-            </li>
-            <li>
-              <i class="fas fa-gem icon-ruby"></i>
-              <div class="modern-list-content">
-                <span class="modern-list-title">Ruby on Rails</span>
-                <span class="modern-list-description"
-                  >Railsチュートリアルを一周し、RailsでのWeb開発の基礎を習得。</span
-                >
-              </div>
-            </li>
-          </ul>
-
-          <h2>競技プログラミング・アルゴリズム</h2>
-          <ul class="modern-list">
-            <li>
-              <div class="modern-list-content">
-                <span class="modern-list-title">AtCoder</span>
-                <span class="modern-list-description"
-                  >Algorithmのみ参加。最高レーティングは1044（緑）。</span
-                >
-              </div>
-            </li>
-            <li>
-              <div class="modern-list-content">
-                <span class="modern-list-title">Paiza</span>
-                <span class="modern-list-description">Sランク取得。</span>
-              </div>
-            </li>
-          </ul>
-
-          <h2>開発ツール</h2>
-          <ul class="modern-list">
-            <li>
-              <i class="fab fa-git-alt icon-git"></i>
-              <div class="modern-list-content">
-                <span class="modern-list-title">Git</span>
-                <span class="modern-list-description"
-                  >バージョン管理についての知識があり、個人プロジェクトでGitHubを使用。</span
-                >
-              </div>
-            </li>
-            <li>
-              <i class="fab fa-docker icon-docker"></i>
-              <div class="modern-list-content">
-                <span class="modern-list-title">Docker</span>
-                <span class="modern-list-description"
-                  >基本的な理解はあるが、大規模なチーム開発での活用経験はなし。</span
-                >
-              </div>
-            </li>
-            <li>
-              <i class="fas fa-terminal icon-wsl"></i>
-              <div class="modern-list-content">
-                <span class="modern-list-title">WSL</span>
-                <span class="modern-list-description"
-                  >Windows上でのLinux環境を開発に利用した経験あり。</span
-                >
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Application Section -->
-      <section id="application" class="section">
-        <h2>Application</h2>
-        <div class="application-container">
-          <!-- Logo & Service Name -->
-          <div class="app-content">
-            <!-- Logo & QR Code (Side by Side) -->
-            <div class="app-media">
-              <a href="https://kakuho.onrender.com/" target="_blank">
-                <img src="logo.png" alt="Kakuho Logo" class="app-logo" />
-              </a>
-              <div class="qr-code">
-                <p class="sp-optimized">スマホ対応しております</p>
-                <img
-                  src="qrcode_kakuho.onrender.com.png"
-                  alt="Kakuho QR Code"
-                />
-              </div>
-            </div>
-
-            <!-- Description -->
-            <div class="app-description">
-              <p>
-                Kakuhoは、イベント予約を管理者、一般ユーザー双方にてスムーズに行えるWebアプリです。
-              </p>
-              <ul>
-                <li>イベント予約、座席管理、イベント管理が可能</li>
-                <li>シンプルなUIと直感的な操作</li>
-                <li>Poetry + FastAPI + React + Renderで構築</li>
-                <li>PostgreSQLを利用し、データの永続性を確保</li>
-              </ul>
-            </div>
+        <div class="about-stats fade-up">
+          <div class="stat-card">
+            <span class="stat-number">4<span class="stat-plus">+</span></span>
+            <span class="stat-label">Years Coding</span>
           </div>
-
-          <!-- GitHub Link -->
-          <div class="app-links">
-            <p>
-              🔗 <strong>GitHub:</strong>
-              <a href="https://github.com/yushin0319/kakuho" target="_blank"
-                >https://github.com/yushin0319/kakuho</a
-              >
-            </p>
+          <div class="stat-card">
+            <span class="stat-number">13</span>
+            <span class="stat-label">Repositories</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number stat-small">Green</span>
+            <span class="stat-label">AtCoder</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">S</span>
+            <span class="stat-label">Paiza Rank</span>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
 
-      <section id="career" class="section">
-        <h2>Career</h2>
-        <div class="timeline">
-          <!-- 2008 -->
-          <div class="timeline-item">
-            <div class="timeline-year">2008</div>
-            <div class="timeline-content">
-              <p>中京大学心理学部卒業</p>
-            </div>
-          </div>
-          <!-- 2010 -->
-          <div class="timeline-item">
-            <div class="timeline-year">2010</div>
-            <div class="timeline-content">
-              <p>株式会社百楽荘 入社</p>
-            </div>
-          </div>
-          <!-- 2013 -->
-          <div class="timeline-item">
-            <div class="timeline-year">2013</div>
-            <div class="timeline-content">
-              <p>同 退社</p>
-            </div>
-          </div>
-          <!-- 2015 -->
-          <div class="timeline-item">
-            <div class="timeline-year">2015</div>
-            <div class="timeline-content">
-              <p>株式会社モアナプティパ 入社</p>
-            </div>
-          </div>
-          <!-- 2019 -->
-          <div class="timeline-item">
-            <div class="timeline-year">2019</div>
-            <div class="timeline-content">
-              <p>同 退社・株式会社ヨコタエンタープライズ 入社</p>
-            </div>
-          </div>
-          <!-- 2024 -->
-          <div class="timeline-item">
-            <div class="timeline-year">2024</div>
-            <div class="timeline-content">
-              <p>同 退社</p>
-            </div>
-          </div>
-          <!-- その他 -->
-          <div class="timeline-item">
-            <div class="timeline-year">並行して</div>
-            <div class="timeline-content">
-              <p>2007～2022年まで劇団「放電家族」に所属</p>
-            </div>
+  <!-- Skills -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <h2 class="section-title fade-up">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category fade-up">
+          <h3><span class="skill-icon">{ }</span>Languages</h3>
+          <div class="skill-tags">
+            <span class="tag tag-strong">Python</span>
+            <span class="tag tag-strong">TypeScript</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">HTML / CSS</span>
+            <span class="tag">Shell</span>
+            <span class="tag">C++</span>
+            <span class="tag">Java</span>
           </div>
         </div>
-      </section>
+        <div class="skill-category fade-up">
+          <h3><span class="skill-icon">&#9881;</span>Frameworks</h3>
+          <div class="skill-tags">
+            <span class="tag tag-strong">React</span>
+            <span class="tag tag-strong">FastAPI</span>
+            <span class="tag">Vite</span>
+            <span class="tag">Poetry</span>
+          </div>
+        </div>
+        <div class="skill-category fade-up">
+          <h3><span class="skill-icon">&#9729;</span>Infrastructure</h3>
+          <div class="skill-tags">
+            <span class="tag tag-strong">Oracle Cloud</span>
+            <span class="tag tag-strong">GitHub Actions</span>
+            <span class="tag">Render</span>
+            <span class="tag">Supabase</span>
+            <span class="tag">Nginx</span>
+            <span class="tag">Docker</span>
+          </div>
+        </div>
+        <div class="skill-category fade-up">
+          <h3><span class="skill-icon">&#9878;</span>AI & Automation</h3>
+          <div class="skill-tags">
+            <span class="tag tag-strong">n8n</span>
+            <span class="tag tag-strong">Claude Code</span>
+            <span class="tag">Gemini API</span>
+            <span class="tag">VOICEVOX</span>
+            <span class="tag">vosk</span>
+          </div>
+        </div>
+        <div class="skill-category fade-up">
+          <h3><span class="skill-icon">&#128295;</span>Tools</h3>
+          <div class="skill-tags">
+            <span class="tag">Git / GitHub</span>
+            <span class="tag">VS Code</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Notion API</span>
+            <span class="tag">tmux</span>
+          </div>
+        </div>
+        <div class="skill-category fade-up">
+          <h3><span class="skill-icon">&#127942;</span>Certifications</h3>
+          <div class="skill-tags">
+            <span class="tag">基本情報技術者</span>
+            <span class="tag">統計検定2級</span>
+            <span class="tag">AtCoder Green (1044)</span>
+            <span class="tag">Paiza S Rank</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <!-- Contact Section -->
-      <section id="contact" class="section">
-        <h2>Contact</h2>
-        <p>
-          メール:
-          <a href="mailto:yushin.fudo1986@gmail.com"
-            >yushin.fudo1986@gmail.com</a
-          >
-        </p>
-        <p>
-          GitHub:
-          <a href="https://github.com/yushin0319" target="_blank"
-            >https://github.com/yushin0319</a
-          >
-        </p>
-      </section>
-    </main>
+  <!-- Projects -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section-title fade-up">Projects</h2>
+      <div class="projects-grid">
 
-    <script src="script.js"></script>
-  </body>
+        <article class="project-card fade-up">
+          <div class="project-number">01</div>
+          <div class="project-body">
+            <div class="project-header">
+              <h3>HistLink</h3>
+              <div class="project-links">
+                <a href="https://histlink.onrender.com" target="_blank" rel="noopener">Live &#8599;</a>
+                <a href="https://github.com/yushin0319/HistLink" target="_blank" rel="noopener">Code &#8599;</a>
+              </div>
+            </div>
+            <p class="project-desc">歴史用語を連鎖的につないで学ぶWebゲーム。日本史・西洋史の知識を楽しみながら深められる。</p>
+            <div class="project-tech">
+              <span>TypeScript</span><span>React</span><span>Vite</span><span>FastAPI</span><span>Supabase</span><span>Render</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card fade-up">
+          <div class="project-number">02</div>
+          <div class="project-body">
+            <div class="project-header">
+              <h3>n8n 自動化基盤</h3>
+              <div class="project-links">
+                <a href="https://github.com/yushin0319/n8n-server" target="_blank" rel="noopener">Code &#8599;</a>
+              </div>
+            </div>
+            <p class="project-desc">Oracle Cloud 上の自動化基盤。Gmail・RSS・GitHub の情報を Notion に自動集約し、毎朝のブリーフィングを完全自動化。</p>
+            <div class="project-tech">
+              <span>n8n</span><span>Oracle Cloud</span><span>Nginx</span><span>Notion API</span><span>Gmail API</span><span>GitHub Actions</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card fade-up">
+          <div class="project-number">03</div>
+          <div class="project-body">
+            <div class="project-header">
+              <h3>音声 I/O システム</h3>
+            </div>
+            <p class="project-desc">ウェイクワードでハンズフリーに AI コーディングアシスタントを操作。オフライン音声認識 + ローカル音声合成。</p>
+            <div class="project-tech">
+              <span>Python</span><span>vosk</span><span>VOICEVOX</span><span>pyautogui</span><span>sounddevice</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card fade-up">
+          <div class="project-number">04</div>
+          <div class="project-body">
+            <div class="project-header">
+              <h3>Multi-Agent System</h3>
+            </div>
+            <p class="project-desc">AI エージェント群を tmux 上で協調動作させるシステム。Chief / Sorter / Worker のロール分離とファイルベース通信。</p>
+            <div class="project-tech">
+              <span>Shell</span><span>tmux</span><span>Claude Code</span><span>YAML</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card fade-up">
+          <div class="project-number">05</div>
+          <div class="project-body">
+            <div class="project-header">
+              <h3>shared-workflows</h3>
+              <div class="project-links">
+                <a href="https://github.com/yushin0319/shared-workflows" target="_blank" rel="noopener">Code &#8599;</a>
+              </div>
+            </div>
+            <p class="project-desc">12リポジトリ共通の GitHub Actions Reusable Workflow。Gemini API による自動コードレビューを全リポに10行で導入可能。</p>
+            <div class="project-tech">
+              <span>GitHub Actions</span><span>Gemini API</span><span>Python</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card fade-up">
+          <div class="project-number">06</div>
+          <div class="project-body">
+            <div class="project-header">
+              <h3>Kakuho</h3>
+              <div class="project-links">
+                <a href="https://kakuho.onrender.com" target="_blank" rel="noopener">Live &#8599;</a>
+                <a href="https://github.com/yushin0319/kakuho" target="_blank" rel="noopener">Code &#8599;</a>
+              </div>
+            </div>
+            <p class="project-desc">イベント予約管理アプリ。管理者・一般ユーザー双方がスムーズに予約・座席を管理できる。</p>
+            <div class="project-tech">
+              <span>Python</span><span>FastAPI</span><span>React</span><span>PostgreSQL</span><span>Render</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Career -->
+  <section class="section section-alt" id="career">
+    <div class="container">
+      <h2 class="section-title fade-up">Career</h2>
+      <div class="timeline">
+        <div class="timeline-item fade-up">
+          <div class="timeline-dot timeline-dot-active"></div>
+          <div class="timeline-date">2025.05 —</div>
+          <div class="timeline-card">
+            <h3>Software Engineer</h3>
+            <p>エンジニアとして就職。実務経験を蓄積中。</p>
+          </div>
+        </div>
+        <div class="timeline-item fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2021 — 2025</div>
+          <div class="timeline-card">
+            <h3>独学でプログラミング習得</h3>
+            <p>Python → AtCoder 緑 → FastAPI + React → TypeScript → クラウドインフラ → AI統合。4年間で競プロ・フルスタック・本番運用まで到達。</p>
+          </div>
+        </div>
+        <div class="timeline-item fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2010 — 2024</div>
+          <div class="timeline-card">
+            <h3>事務職（3社 / 約14年）</h3>
+            <p>百楽荘 → モアナプティパ → ヨコタエンタープライズ。業務改善・問題解決への関心がエンジニアリングへの転身につながった。</p>
+          </div>
+        </div>
+        <div class="timeline-item fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2007 — 2022</div>
+          <div class="timeline-card">
+            <h3>劇団「放電家族」（15年間）</h3>
+            <p>創作活動を通じて、ユーザー視点の思考・チーム協働・表現力を培った。</p>
+          </div>
+        </div>
+        <div class="timeline-item fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2008</div>
+          <div class="timeline-card">
+            <h3>中京大学 心理学部 卒業</h3>
+            <p>人間の認知・行動への理解が、UX設計やゲームデザインの基盤に。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="section-title fade-up">Contact</h2>
+      <div class="contact-grid fade-up">
+        <a href="mailto:yushin.fudo1986@gmail.com" class="contact-card">
+          <div class="contact-icon">&#9993;</div>
+          <span class="contact-label">Email</span>
+          <span class="contact-value">yushin.fudo1986@gmail.com</span>
+        </a>
+        <a href="https://github.com/yushin0319" target="_blank" rel="noopener" class="contact-card">
+          <div class="contact-icon">&#128187;</div>
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">yushin0319</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2026 Yushin Fudo</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
